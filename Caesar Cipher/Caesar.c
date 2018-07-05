@@ -31,7 +31,7 @@ int main()
         case 2:
                 for(char c=a[0];c!='\0';c=a[i])
                 {
-                    c = (c > 96 && c < 123)?(int) c + n:c;
+                    c = (c > 96 && c < 123)?(int) c - n:c;
                     if((int)c < 97)
                         c = ((int)c - 97 + 26)%26 + 97;
                         a[i]=c;
