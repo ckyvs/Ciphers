@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-int getdat(char *a, int *n)
+int getdat(char *a, int *n)//The function called to collect the data to Encrpt or Decrypt the data
 {
     int len;
     printf("Type the message :\n");
@@ -17,7 +17,7 @@ int main()
     char *a;
     int n,i=0,v,len;
     a = (char*)malloc(100*sizeof(char));
-    while(3)
+    while(3)//Asking for the choice to Encrypt or Decrypt the data or to exit the program
     {
     printf("1.Encrypt 2.Decrypt 3.Exit\n:");
     scanf("%d",&v);
@@ -25,8 +25,8 @@ int main()
     switch (v)
     {
         case 1:
-                len = getdat(a,&n);
-                for(char c=a[0],i=0;c!='\0';c=a[i])
+                len = getdat(a,&n); //call the the function to get the data
+                for(char c=a[0],i=0;c!='\0';c=a[i]) //logic for Encrypt the data
                 {
                     c = (c > 96 && c < 123)?(int) c + n:c;
                     if((int)c > 122)
@@ -39,8 +39,8 @@ int main()
                 printf("%s\n",a);
                 break;
         case 2:
-                len = getdat(a,&n);
-                for(char c=a[0],i=0;c!='\0';c=a[i])
+                len = getdat(a,&n);//calling the function to collect the data 
+                for(char c=a[0],i=0;c!='\0';c=a[i])//logic for Decrypt the data
                 {
                     c = (c > 96 && c < 123)?(int) c - n:c;
                     if((int)c < 97)
@@ -53,10 +53,10 @@ int main()
                 printf("%s\n",a);
                 break;
         case 3:
-                exit(0);
+                exit(0);//to come out of the program
                 break;
         default:
-                printf("Select a valid choice \n");
+                printf("Select a valid choice \n");//displace in case of wrong choice 
     }
     }
 }
