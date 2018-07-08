@@ -36,6 +36,7 @@ int main()
                     i++;
                 }
                 a[len-1]='\0';
+                printf("%d",len);
                 printf("%s\n",a);
                 break;
         case 2:
@@ -48,6 +49,7 @@ int main()
                     a[i]=c;
                     i++;
                 }
+                printf("%d",len);
                 a[len-1]='\0';
                 printf("%s\n",a);
                 break;
