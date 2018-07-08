@@ -12,7 +12,6 @@ int getdat(char *a, int *n)
     getchar(); //to clear stdin cache
     return len;
 }
-
 int main()
 {
     char *a;
