@@ -26,6 +26,7 @@ int main()
     {
         case 1:
                 len = getdat(a,&n); //call the the function to get the data
+                n%=26; //this will prevent ascii values from going out of range for large values of n
                 for(char c=a[0],i=0;c!='\0';c=a[i]) //logic for Encrypt the data
                 {
                     c = (c > 96 && c < 123)?(int) c + n:c;
