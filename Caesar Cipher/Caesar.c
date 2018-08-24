@@ -41,6 +41,7 @@ int main()
                 break;
         case 2:
                 len = getdat(a,&n);//calling the function to collect the data 
+                n%=26;
                 for(char c=a[0],i=0;c!='\0';c=a[i])//logic for Decrypt the data
                 {
                     c = (c > 96 && c < 123)?(int) c - n:c;
