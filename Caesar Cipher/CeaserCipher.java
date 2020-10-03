@@ -1,5 +1,5 @@
 import java.util.*;
-public class ceaserCipher
+public class CeaserCipher
 {
     static String encrypt( String str , int n )
     {
